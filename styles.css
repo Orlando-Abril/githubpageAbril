@@ -1,0 +1,295 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dad5d5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    width: border-box;
+}
+
+/* Centra todo el contenido del header */
+.header {
+    display: flex;
+    align-items: center;
+    background-image: url("./Imagenes/fondoSushi.jpg"); /* opcional */
+    background-size: cover;
+    background-position: center;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+/*Ancla del ancla H1*/
+header h1 a {
+    text-decoration: none;
+    color: #0a0202;
+    font-size: 2rem;
+}
+
+
+/* Centra logo y texto en columna */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;    
+    flex: 1; /* ocupa espacio disponible */
+
+}
+
+/* Tamaño del logo */
+.logo {
+    width: 9rem;
+}
+
+.menu-navegacion {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    justify-content: space-evenly;
+    gap: 5px;
+
+}
+
+.menu-navegacion li {
+    list-style-type: none;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.menu-navegacion li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu-navegacion li a:hover {
+    color: #6f6e6e;
+
+}
+
+/*Configuración del H2*/
+h2 {
+    font-family: b ;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #0b0b0b;
+}
+
+/* PIEZAS SUSHI */
+/*Configuración sección Posters*/
+#contenedor-piezas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1.5rem;
+    gap: 1.5rem;
+
+}
+
+.piezas {
+    text-align: center;
+    width: 23%;
+    transition: 0.5s ease;
+}
+
+.piezas:hover {
+    /* Mueve la tarjeta 5px hacia arriba */
+    transform: translateY(-15px);
+
+}
+
+.piezas img {
+    border-radius: 10px;
+    width: 10rem;
+    height: 7.5rem;
+    box-shadow: 5px 5px 15px 5px #3d3d3d;
+}
+
+.piezas h3 {
+    color: white;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+/* PDF DE MENU */
+.seccion-menu {
+  position: relative;
+  background: url('./Imagenes/fondoMenu.jpg') center center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5); /* Capa oscura para que el texto resalte */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-menu {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.contenido-menu h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.botones-menu {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #5f5f5f;
+  padding: 0.75rem 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #050505;
+}
+
+
+/* FORMULARIO */
+/*Configuración Formulario*/
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem;
+    font-size: 1.5rem;
+}
+
+input,
+textarea,
+button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input,
+textarea {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+button {
+    background-color: #e50914;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+    width: 40%;
+
+}
+
+button:hover {
+    background-color: #ca0707b6;
+}
+
+.checkbox-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+
+/* RED SOCIAL */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 80%;
+  transition: transform 0.2s ease;
+}
+
+.social-icon img:hover {
+  transform: scale(1.1);
+  background-color: #807c7c; /* o el color que prefieras */
+}
+
+
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+    header {
+        font-size: 2rem;
+    }
+
+    #intro .texto-intro {
+        font-size: 1rem;
+        line-height: 2;
+    }
+
+    .poster {
+        width: 35%;
+    }
+
+    .poster h3 {
+        color: white;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    #contenedor-sinopsis-trailers {
+        grid-template-columns: 1fr;
+    }
+
+    .sinopsis h2 {
+        font-size: 2rem;
+        margin: 1rem;
+    }
+
+    .sinopsis p {
+        margin: 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    color: #888;
+}
