@@ -12,11 +12,18 @@ body {
 .header {
     display: flex;
     align-items: center;
-    background-image: url("./Imagenes/fondoSushi.jpg"); /* opcional */
+/*     background-image: url("./Imagenes/fondoSushi.jpg"); */
+
     background-size: cover;
     background-position: center;
+    background-color: #ffffff;
     letter-spacing: 0.2rem;
     text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    min-height: unset;
+    height: auto;
 }
 
 /*Ancla del ancla H1*/
@@ -30,41 +37,46 @@ header h1 a {
 /* Centra logo y texto en columna */
 .logo-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 1rem;    
-    flex: 1; /* ocupa espacio disponible */
-
-}
-
-/* Tamaño del logo */
-.logo {
-    width: 9rem;
+    text-align: left;
+    padding: 0.25rem 0;
+    flex: 0 0 auto;
 }
 
 .menu-navegacion {
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    flex: 1;
+}
+
+.menu {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 1.5rem;
-    justify-content: space-evenly;
-    gap: 5px;
-
+    justify-content: flex-end;
+    gap: 1.5rem;
 }
 
-.menu-navegacion li {
+/* Tamaño del logo */
+.logo {
+    width: 6rem;
+}
+
+.menu li {
     list-style-type: none;
     text-shadow: none;
     cursor: pointer;
 }
 
-.menu-navegacion li a {
+.menu li a {
     color: #000000;
     text-decoration: none;
 }
 
-.menu-navegacion li a:hover {
+.menu li a:hover {
     color: #6f6e6e;
 
 }
@@ -91,7 +103,6 @@ h2 {
 .piezas {
     text-align: center;
     width: 23%;
-    transition: 0.5s ease;
 }
 
 .piezas:hover {
@@ -101,10 +112,9 @@ h2 {
 }
 
 .piezas img {
-    border-radius: 10px;
+    border-radius: 0.625rem;
     width: 10rem;
     height: 7.5rem;
-    box-shadow: 5px 5px 15px 5px #3d3d3d;
 }
 
 .piezas h3 {
@@ -117,20 +127,14 @@ h2 {
 .seccion-menu {
   position: relative;
   background: url('./Imagenes/fondoMenu.jpg') center center/cover no-repeat;
-  height: 300px;
+  height: rem;
   display: flex;
+  height: 40rem;
   align-items: center;
   justify-content: center;
   color: white;
-}
+  background-attachment: fixed;
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0,0,0,0.5); /* Capa oscura para que el texto resalte */
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .contenido-menu {
@@ -150,20 +154,87 @@ h2 {
   justify-content: center;
 }
 
-.btn {
+.boton-menu {
   background-color: #5f5f5f;
   padding: 0.75rem 2rem;
   color: white;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 30px;
+  border-radius: 1.875rem;
   transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn:hover {
+.boton-menu:hover {
   background-color: #050505;
 }
 
+/* Parte de delivery y hacer pedido */
+.pedido{
+    height: 31.25rem;
+    margin: 0.625rem;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* centra todo verticalmente */
+    align-items: center; /* centra horizontalmente */
+    padding-top: 3rem;
+}
+
+.pedido-delivery{
+  font-family: "Borel", cursive;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.botones-pedido-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centrado horizontal */
+    gap: 1rem; /* Espaciado entre botones */
+}
+
+.boton-delivery{
+  background-color: transparent;
+  border: 0.15rem solid rgb(118, 117, 117);
+  padding: 2rem 3rem;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0.50rem;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.boton-delivery:hover {
+  background-color: #949494;
+}
+
+
+.botones-pedido-group a{
+    font-size: 1.25rem;
+    margin: 0; /* Quitamos márgenes innecesarios */
+    padding: 0; /* Evitamos conflictos con el padding del botón */
+}
+
+.delivery-h2{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0rem;   /* más cerca del título */
+    margin-bottom: 2rem;  /* deja espacio con los botones */
+}
 
 /* FORMULARIO */
 /*Configuración Formulario*/
@@ -181,7 +252,7 @@ textarea,
 button {
     padding: 0.8rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     font-size: 1rem;
 }
 
@@ -234,9 +305,9 @@ button:hover {
 }
 
 .social-icon img {
-  width: 30px;
-  height: 30px;
-  padding: 5px;
+  width: 1.875rem;
+  height: 1.875rem;
+  padding: 0.3125rem;
   background-color: white;
   border-radius: 80%;
   transition: transform 0.2s ease;
@@ -290,6 +361,29 @@ footer {
     text-align: center;
     margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid #333;
+    border-top: 0.0625rem solid #333;
     color: #888;
+}
+
+/* Iconos de redes sociales */
+.mi-icono-instagram {
+  font-size: 2rem;      /* Tamaño del ícono */
+  color: #E4405F;        /* Color Instagram */
+  margin: 10px;          /* Espacio alrededor */
+  transition: transform 0.3s; /* Animación suave al pasar el mouse */
+}
+
+.mi-icono-instagram:hover {
+  transform: scale(1.2); /* Agranda el ícono al pasar el mouse */
+}
+
+.mi-icono-facebook {
+  font-size: 2rem;      /* Tamaño del ícono */
+  color: #2b11d8;        /* Color Facebook */
+  margin: 10px;          /* Espacio alrededor */
+  transition: transform 0.3s; /* Animación suave al pasar el mouse */
+}
+
+.mi-icono-facebook:hover {
+  transform: scale(1.2); /* Agranda el ícono al pasar el mouse */
 }
