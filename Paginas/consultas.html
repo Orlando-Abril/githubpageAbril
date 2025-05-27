@@ -7,13 +7,27 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Insertamos tipografía-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Logo instagram -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Logo facebook -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
     <title>Consultas</title>
 </head>
 
 <body>
-    <header>
-        <h1><a href="../index.html">NBSushi</a></h1>
+
+
+    <header class="header">
+        
+        <div class="logo-container">
+
+            <a href="../index.html"><img src="../Imagenes/logoSinFondoBlanco.jpg" alt="Logo NB Sushi" class="logo"></a>
+        </div>
+        
+        
+        <!-- Agregar lupa para buscar -->
     </header>
 
     <h2>Consultas</h2>
@@ -27,16 +41,25 @@
         <label for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje" placeholder="Ingrese su consulta" required minlength="10"></textarea>
 
-        <div class="checkbox-form">
-            <input type="checkbox" name="spam" id="spam">
-            <label for="checkbox">¿Desea recibir notificaciones y actualizaciones de nuestros productos?</label>
-        </div>
-
         <button type="submit">Enviar</button>
     </form>
 
-    <footer>
-        <p>&copy; 2025 - Todos los errores reservados</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Iconos de redes sociales -->
+            <div class="social-icons">
+            <a href="https://www.instagram.com/nbsushiquilmes/" target="_blank" class="social-icon">
+            <i class="fa-brands fa-instagram mi-icono-instagram"></i>
+        </a>
+                <a href="https://www.facebook.com/seno.romi.79" target="_blank" class="social-icon">
+                <i class="fa-brands fa-facebook-f mi-icono-facebook"></i>
+                </a>
+        </div>
+                <p>&copy; 2025 - Mi sitio de pre-entrega</p>
+
+                <div class="preguntasFrecuentes">
+                    <a href="./Paginas/preguntas-frecuentes.html">Preguntas Frecuentes</a>
+                </div>
     </footer>
 
 </body>
