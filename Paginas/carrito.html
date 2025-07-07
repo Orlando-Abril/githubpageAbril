@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- Logo instagram -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Logo facebook -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="../Imagenes/logoConFondoNegroRedondo.png" type="image/png">
-    <title>Proximamente!</title>
+    <title>Carrito</title>
+    <link rel="stylesheet" href="../styles.css">
+    
+
 </head>
 <body>
 
-
-    <header class="header">
+     <header class="header">
         
         <div class="logo-container">
 
@@ -23,26 +19,28 @@
         </div>
 
          <nav>
-            <ul>
-                <li>
-                    <a href="../Paginas/carrito.html" class="carrito-icono">
-                        🛒 <span id="contenedor-agregados">0</span>
-                    </a>
-                </li>
-            </ul>
+        <ul class="menu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li>
+                <a href="carrito.html" class="carrito-icono">
+                    🛒 <span id="contenedor-agregados">0</span>
+                </a>
+            </li>
+        </ul>
         </nav>
 
     </header>
-    
-    <main>
-            <h1>  Mi E-Commerce!</h1>
 
-    </main>
+        <main>
+            <h2 class="titulo-carrito">Carrito de compra</h2>
+            <section id="contenedor-productos">
+                <!-- Aquí se agregarán los productos del carrito -->
+            </section>
+            <div id="acciones-carrito">
+                <!-- Botón para vaciar el carrito -->
+            </div>
 
-   
-        <section id="contenedor-piezas">
-
-        </section>
+        </main>
 
     <footer class="footer">
         <div class="footer-content">
@@ -61,8 +59,9 @@
                     <a href="../Paginas/preguntas-frecuentes.html">Preguntas Frecuentes</a>
                 </div>
     </footer>
-    <script src="../app.js"></script>
+    </div>
+
+    <script src="../carrito.js"></script>
 
 </body>
-
 </html>

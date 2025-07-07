@@ -399,6 +399,82 @@ button:hover {
   transform: scale(1.2); /* Agranda el ícono al pasar el mouse */
 }
 
+  /*carrito*/
+  #contenedor-agregados {
+  background-color: crimson;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+#contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#acciones-carrito {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#acciones-carrito button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    background-color: crimson;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#acciones-carrito button:hover {
+    background-color: darkred;
+}
+
+.titulo-carrito {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  color: #333;
+}
+
+.mensaje-carrito {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+  margin: 2rem auto;
+}
+
+.piezas {
+    flex: 1 1 calc(25% - 2rem);
+    max-width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+}
+
+.piezas img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.piezas h3 {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
 
 
 /* Estilos para pantallas pequeñas hasta 600px*/
@@ -507,4 +583,7 @@ button:hover {
     width: 2.5rem;
     height: 2.5rem;
   }
+
+
+
 }
